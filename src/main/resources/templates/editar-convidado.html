@@ -1,0 +1,37 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Convidado</title>
+</head>
+<body>
+    <header>
+        <h1>Editar formulário de Convidados</h1>
+    </header>
+    <main>
+        <h2>Preencha este formulário:</h2>
+        <form action="/salvar-convidados" method="post" th:object="${convidado}">
+            <input type="hidden" id="idConvidado" name="idConvidado" th:field="*{idConvidado}">
+            <label for="nome">Nome do convidado:</label>
+            <input type="text" name="nome" placeholder="Digite seu nome aqui" th:field="*{nome}"><br /><br />
+
+            <label for="RG">RG nº:</label>
+            <input type="number" name="rg" placeholder="Digite seu RG" th:field="*{rg}"><br /><br />
+
+            <label for="CPF">CPF nº:</label>
+            <input type="number" name="cpf" placeholder="Digite seu CPF" th:field="*{cpf}"><br /><br />
+
+            <label for="numero">Nº acompanhante:</label>
+            <input type="number" name="numero" placeholder="Digite o número" th:field="*{numero}"><br /><br />
+
+            <input type="submit" name="enviar" value="Enviar">  
+            <input type="submit" name="apagar" value="Apagar">    
+        </form>
+    </main>
+    <footer></footer>
+</body>
+</html>

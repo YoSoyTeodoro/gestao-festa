@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Convidado</title>
+</head>
+<body>
+    <header>
+        <h1>Formulário para Cadastro de Convidados</h1>
+    </header>
+    <main>
+        <h2>Preencha este formulário:</h2>
+        <form action="salvar-convidados" method="POST">
+            <label for="nome">Nome do convidado:</label>
+            <input type="text" name="nome" placeholder="Digite seu nome aqui"><br /><br />
+
+            <label for="RG">RG nº:</label>
+            <input type="number" name="rg" placeholder="Digite seu RG"><br /><br />
+
+            <label for="CPF">CPF nº:</label>
+            <input type="number" name="cpf" placeholder="Digite seu CPF"><br /><br />
+
+            <label for="numero">Nº acompanhante:</label>
+            <input type="number" name="numero" placeholder="Digite o número"><br /><br />
+
+            <input type="submit" name="enviar" value="Enviar">  
+            <input type="submit" name="apagar" value="Apagar">    
+        </form>
+    </main>
+    <footer></footer>
+</body>
+</html>
